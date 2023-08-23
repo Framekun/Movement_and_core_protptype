@@ -42,8 +42,7 @@ public class newEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Filler();
-        UpdateTimers();
+        
         if(canmove) 
         {
             Enemymovement();
@@ -63,6 +62,11 @@ public class newEnemy : MonoBehaviour
         {
             Dead();
         }
+    }
+    private void FixedUpdate()
+    {
+        Filler();
+        UpdateTimers();
     }
 
     public void SetController(Enemycontrolscript controller)
@@ -143,10 +147,10 @@ public class newEnemy : MonoBehaviour
     {
         if (readytoattack == true && attackCooldownTimer <= 0f)
         {
+            attackCooldownTimer = attackCooldown;
             canmove = false;
             anim.SetTrigger("Attack");
-            readytoattack = false;
-            attackCooldownTimer = attackCooldown;
+            readytoattack = false; 
         }
 
     }
