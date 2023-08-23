@@ -21,7 +21,7 @@ public class newEnemy : MonoBehaviour
     float delay;
     private Enemycontrolscript _controller;
     private Movementcode target;
-    float speed = 5f;
+    public float speed = 5f;
     bool readytoattack = false;
     public float attackCooldownTimer;
     public Image HPBar;
