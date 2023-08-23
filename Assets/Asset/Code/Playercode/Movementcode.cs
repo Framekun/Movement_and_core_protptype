@@ -137,6 +137,14 @@ public class Movementcode : MonoBehaviour
         }
 ;
     }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Onground = true;
+        }
+;
+    }
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag == "Ground")
