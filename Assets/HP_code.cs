@@ -9,9 +9,11 @@ public class HP_code : MonoBehaviour
     public float MaxHp;
     public float currentHp;
     public Image HPBar;
+    private Movementcode player;
     void Start()
     {
         currentHp = MaxHp;
+        player = gameObject.GetComponent<Movementcode>();
     }
 
     // Update is called once per frame
@@ -22,14 +24,18 @@ public class HP_code : MonoBehaviour
         {
             currentHp = 0;
             Debug.Log("Game_over");
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "EnemyHitbox")
         {
-            currentHp -= 10;
+            if(player.Candamage == true)
+            {
+                currentHp -= 10;
+            }
+            
         }
     }
     void Filler()

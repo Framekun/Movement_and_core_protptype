@@ -14,9 +14,6 @@ public class Hitboxcode : MonoBehaviour
     public int Attack = 20;
     public float knockx;
     public float knocky;
-    public bool redattack;
-    public bool Blueattack;
-    public bool Guardbreak;
     public CinemachineImpulseSource cinima;
 
     private void Awake()
@@ -36,18 +33,8 @@ public class Hitboxcode : MonoBehaviour
 
     void SetCurrentAttack()
     {
-        if (redattack && stamina.currentredstamina <= 0)
-        {
-            Attack = (int)(BaseAttack * 0.5f);
-        }
-        else if (Blueattack && stamina.currentbluestamina <= 0)
-        {
-            Attack = (int)(BaseAttack * 0.5f);
-        }
-        else
-        {
+      
             Attack = BaseAttack;
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -83,15 +70,6 @@ public class Hitboxcode : MonoBehaviour
 
             //}
 
-            if (redattack)
-            {
-                stamina.currentbluestamina += 1;
-            }
-            if(Blueattack) 
-            {
-                stamina.currentredstamina += 1;
-            }
-           
         }
     }
 }

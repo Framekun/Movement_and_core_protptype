@@ -120,22 +120,8 @@ public class Enemycode : MonoBehaviour
             {
                 other.GetComponent<Hitboxcode>();
                 isattacked = true;
-                if(redType == true) 
-                { 
-                  if(player.redattack == true)
-                    {
-                        Damageget = player.Attack;
-                        currentHP -= Damageget;
-                    }
-                }
-                if (blueType == true)
-                {
-                    if (player.Blueattack == true)
-                    {
-                        Damageget = player.Attack;
-                        currentHP -= Damageget;
-                    }
-                }
+                Damageget = player.Attack;
+                currentHP -= Damageget;
 
             }
            

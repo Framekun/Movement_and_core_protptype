@@ -15,13 +15,15 @@ public class Movementcode : MonoBehaviour
     public int HP;
     bool canmove = true;
     public bool canmovecheck;
-    bool Candamage = true;
+    public bool Candamage = true;
     float delay = 0;
+    public ParticleSystem Partical;
 
     // Start is called before the first frame update
     void Start()
     {
         Damage = FindObjectOfType<AttackBox>();
+        Partical.Stop();
     }
 
     // Update is called once per frame
@@ -34,6 +36,15 @@ public class Movementcode : MonoBehaviour
             Jump();
             Rolling();
             Candamage = true;
+        }
+        if(Candamage == false)
+        {
+            delay += Time.deltaTime;
+            if (delay > 2f)
+            {
+                Candamage = true;
+                delay = 0f;
+            }
         }
         else
         {
@@ -159,9 +170,11 @@ public class Movementcode : MonoBehaviour
         {
             if(Candamage == true)
             {
-                anim.SetTrigger("Damage");
                 canmove = false;
+                anim.SetTrigger("Damage");
+                Partical.Play();
                 Candamage = false;
+
             }  
         }
     }

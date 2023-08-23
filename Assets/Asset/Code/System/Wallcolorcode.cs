@@ -20,26 +20,5 @@ public class Wallcolorcode : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         hitboxdected = other.GetComponent<Hitboxcode>();
-
-        if(hitboxdected != null ) 
-        { 
-            if(hitboxdected.redattack == true)
-            {
-                if(redType== true) 
-                {
-                    print("Reddected");
-                    Destroy(gameObject);
-                }
-            }
-
-            if (hitboxdected.Blueattack == true)
-            {
-                if(blueType== true)
-                {
-                    print("Bluedected");
-                    Destroy(gameObject);
-                }
-            }
-        }
     }
 }

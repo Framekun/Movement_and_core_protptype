@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering.Universal;
+using Unity.VisualScripting;
 
 public class newEnemy : MonoBehaviour
 {
     [SerializeField] private Rigidbody enemyrb;
-    [SerializeField] public bool redType;
-    [SerializeField] public bool blueType;
     [SerializeField] private float xStopDistance = 2f;
     [SerializeField] private float zStopDistance = 0.5f;
     [SerializeField] private Animator anim;
@@ -17,9 +16,7 @@ public class newEnemy : MonoBehaviour
     private float difDistance;
     bool canmove;
     public float HP;
-    public float ShildHP;
     public float currentHP;
-    public float currentShild;
     int Damageget;
     float delay;
     private Enemycontrolscript _controller;
@@ -35,7 +32,6 @@ public class newEnemy : MonoBehaviour
     void Start()
     {
         currentHP = HP;
-        currentShild = ShildHP;
         target = FindObjectOfType<Movementcode>();
         difDistance = Random.value / 4.0f;
         print("number" + difDistance);
@@ -62,12 +58,6 @@ public class newEnemy : MonoBehaviour
                 canmove = true;
                 delay = 0;
             }
-        }
-        if(currentShild <= 0)
-        {
-            currentShild = 0;
-            redType = true;
-            blueType = true;
         }
         if (currentHP <= 0)
         {
@@ -153,6 +143,7 @@ public class newEnemy : MonoBehaviour
     {
         if (readytoattack == true && attackCooldownTimer <= 0f)
         {
+            canmove = false;
             anim.SetTrigger("Attack");
             readytoattack = false;
             attackCooldownTimer = attackCooldown;
@@ -163,21 +154,13 @@ public class newEnemy : MonoBehaviour
     void Filler()
     {
         HPBar.fillAmount = currentHP/HP;
-        ShildBar.fillAmount = currentShild/ShildHP;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Hitbox")
         {
-            if(currentShild > 0)
-            {
-                Partical01.Play();
-            }
-            if(currentShild <= 0)
-            {
-                Partical02.Play();
-            }
+            Partical02.Play();
         }
     }
 

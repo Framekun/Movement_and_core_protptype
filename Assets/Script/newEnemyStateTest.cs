@@ -186,31 +186,7 @@ public class newEnemyStateTest : MonoBehaviour
         anim.SetTrigger("Damage");
         canmove= false;
         readytoattack = false;
-        if (redType == true)
-        {
-            if (hitbox.redattack == true)
-            {
-                Damageget = hitbox.Attack;
-                currentHP -= Damageget;
-            }
-            else if (hitbox.redattack == false && ShildHP > 0)
-            {
-                Damageget = hitbox.Attack;
-                currentShild -= Damageget;
-            }
-        }
-        if (blueType == true)
-        {
-            if (hitbox.Blueattack == true)
-            {
-                Damageget = hitbox.Attack;
-                currentHP -= Damageget;
-            }
-            else if (hitbox.Blueattack == false && ShildHP > 0)
-            {
-                Damageget = hitbox.Attack;
-                currentShild -= Damageget;
-            }
-        }
+        Damageget = hitbox.Attack;
+        currentHP -= Damageget;
     }
 }
