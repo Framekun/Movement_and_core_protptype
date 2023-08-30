@@ -20377,6 +20377,7 @@ MonoBehaviour:
   Speed: 20
   Jumppower: 10
   DecelerationWhileAttacking: 40
+  _camera: {fileID: 428879974}
   Damage: {fileID: 0}
   anim: {fileID: 1561452742}
   Onground: 1

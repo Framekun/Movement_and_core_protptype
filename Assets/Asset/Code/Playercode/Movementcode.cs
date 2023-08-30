@@ -8,6 +8,9 @@ public class Movementcode : MonoBehaviour
     [SerializeField] float Speed = 15;
     [SerializeField] float Jumppower = 10;
     [SerializeField] float DecelerationWhileAttacking = 40f;
+
+    [SerializeField] private Camera _camera;
+
     public AttackBox Damage;
     public Animator anim;
     public bool Onground = true;
@@ -19,6 +22,24 @@ public class Movementcode : MonoBehaviour
     float delay = 0;
     public ParticleSystem Partical;
 
+    private float _facingDirection = 1f;
+
+    public Vector3 ScreenForward
+    {
+        get
+        {
+            return Vector3.ProjectOnPlane(_camera.transform.forward, Vector3.up);
+        }
+    }
+
+    public Vector3 ScreenRight
+    {
+        get
+        {
+            return Vector3.ProjectOnPlane(_camera.transform.right, Vector3.up);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +50,8 @@ public class Movementcode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        AlignWithCam();
+
         canmovecheck = canmove;
         if (canmove == true)
         {
@@ -72,31 +95,38 @@ public class Movementcode : MonoBehaviour
         }
     }
 
+    void AlignWithCam()
+    {
+        transform.rotation = Quaternion.LookRotation(ScreenForward * _facingDirection, Vector3.up);
+    }
+
     void Movement()
     {
         if (isrolling) return;
 
         if (Input.GetKey(KeyCode.W) == true)
         {
-            rb.velocity = new Vector3(0, rb.velocity.y, Speed);
+            rb.velocity = ScreenForward * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenForward);
             anim.SetBool("Isrunning", true);
         }
         if (Input.GetKey(KeyCode.S) == true)
         {
-            rb.velocity = new Vector3(0, rb.velocity.y, -Speed);
+            rb.velocity = -ScreenForward * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenForward);
             anim.SetBool("Isrunning", true);
         }
         if (Input.GetKey(KeyCode.A) == true)
         {
-            rb.velocity = new Vector3(-Speed, rb.velocity.y, 0);
-            rb.transform.eulerAngles = new Vector3(0, -180, 0);
+            _facingDirection = -1f;
+            AlignWithCam();
+            rb.velocity = -ScreenRight * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
             anim.SetBool("Isrunning", true);
 
         }
         if (Input.GetKey(KeyCode.D) == true)
         {
-            rb.velocity = new Vector3(Speed, rb.velocity.y, 0);
-            rb.transform.eulerAngles = new Vector3(0, 0, 0);
+            _facingDirection = 1f;
+            AlignWithCam();
+            rb.velocity = ScreenRight * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
             anim.SetBool("Isrunning", true);
         }
         else if (Input.GetKey(KeyCode.W) == false && Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.S) == false && Input.GetKey(KeyCode.D) == false)
