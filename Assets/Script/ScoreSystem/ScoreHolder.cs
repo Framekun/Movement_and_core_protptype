@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class ScoreHolder : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int Score;
+    private void Awake()
     {
-        
+        if(PlayerPrefs.HasKey("ScoreHolder") == false)
+        {
+            PlayerPrefs.SetInt("ScoreHolder", Score);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    ///private void Update()
+ //   {
+   /// }
+    public void ResetScoreTest()
     {
-        
+        PlayerPrefs.SetInt("ScoreHolder", 0);
     }
 }
+ 

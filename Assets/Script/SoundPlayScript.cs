@@ -25,12 +25,16 @@ public class SoundPlayScript : MonoBehaviour
         }
     }
 
-    void StartAudio()
+    public void StartAudio()
     {
         AudioPlay = true;
     }
-    void StopAudio()
+    public void StopAudio()
     {
         AudioPlay = false;
+    }
+    public void PlayAudioOnce()
+    {
+        AudioPlace.Play();
     }
 }
