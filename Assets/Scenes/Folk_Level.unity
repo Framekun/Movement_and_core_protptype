@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 38844130}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6065,7 +6065,7 @@ Camera:
     height: 1
   near clip plane: 1.5
   far clip plane: 4999.16
-  field of view: 76
+  field of view: 78.6
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -6540,7 +6540,7 @@ GameObject:
   - component: {fileID: 444731132}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11292,7 +11292,7 @@ GameObject:
   - component: {fileID: 877027635}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11464,7 +11464,7 @@ GameObject:
   - component: {fileID: 882806496}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12519,10 +12519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf0758c92e06d945b060aaa4dcf0cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Visualcam1: {fileID: 2072014943}
-  Visualcam2: {fileID: 1136831513}
+  Visualcam1: {fileID: 1136831513}
+  Visualcam2: {fileID: 2072014943}
   CameraTrigger1: {fileID: 965064826}
-  Battlemodeactive: 0
 --- !u!65 &965064829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14111,7 +14110,7 @@ GameObject:
   - component: {fileID: 1088276147}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14371,10 +14370,10 @@ MonoBehaviour:
   m_LookAt: {fileID: 1561452745}
   m_Follow: {fileID: 1561452745}
   m_Lens:
-    FieldOfView: 76
+    FieldOfView: 78
     OrthographicSize: 10
     NearClipPlane: 1.5
-    FarClipPlane: 4999.16
+    FarClipPlane: 4991
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
@@ -14397,14 +14396,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136831513}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.098410234, y: -0.7002253, z: 0.098410234, w: 0.7002253}
-  m_LocalPosition: {x: 0, y: 8.12, z: -10}
+  m_LocalRotation: {x: 0.11548889, y: -0.69761187, z: 0.11548889, w: 0.69761187}
+  m_LocalPosition: {x: 9.16, y: 4.82, z: -1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1670674216}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 16, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 18.8, y: -90, z: 0}
 --- !u!114 &1136831516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15193,7 +15192,7 @@ GameObject:
   - component: {fileID: 1191599489}
   m_Layer: 0
   m_Name: Hitbox
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22075,7 +22074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 8.12, z: -10}
+  m_FollowOffset: {x: 9.16, y: 4.82, z: -1.1}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -22616,7 +22615,6 @@ MonoBehaviour:
   Visualcam1: {fileID: 2072014943}
   Visualcam2: {fileID: 1136831513}
   CameraTrigger1: {fileID: 1697425603}
-  Battlemodeactive: 0
 --- !u!1001 &1706891296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25338,7 +25336,7 @@ GameObject:
   - component: {fileID: 1897408652}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27946,7 +27944,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 1561452745}
   m_Follow: {fileID: 1561452745}
   m_Lens:
-    FieldOfView: 76
+    FieldOfView: 78.6
     OrthographicSize: 10
     NearClipPlane: 1.5
     FarClipPlane: 4999.16

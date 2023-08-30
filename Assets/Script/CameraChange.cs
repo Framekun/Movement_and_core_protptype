@@ -10,23 +10,23 @@ public class CameraChange : MonoBehaviour
     //[SerializeField] GameObject CameraTrigger2;
 
     //[SerializeField] Enemycontrolscript Check;
-    public bool Battlemodeactive = false;
-    void Start()
-    {
-        Visualcam2.SetActive(false);
-    }
+    //public bool Battlemodeactive = false;
+    //void Start()
+    //{
+    //    Visualcam2.SetActive(false);
+    //}
 
     // Update is called once per frame
     void Update()
     {
-        if (Battlemodeactive == true)
-        {
-            BattlemodeactiveOn();
-        }
-        else
-        {
-            BattlemodeactiveOff();
-        }
+        //if (Battlemodeactive == true)
+        //{
+            //BattlemodeactiveOn();
+        //}
+        //else
+        //{
+        //    BattlemodeactiveOff();
+        //}
         //if (Check.clear == true)
         //{
         //    Destroy(gameObject);
@@ -50,7 +50,7 @@ public class CameraChange : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Battlemodeactive = true;
+            BattlemodeactiveOn();
         }
     }
 
