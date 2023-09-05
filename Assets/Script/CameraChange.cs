@@ -39,12 +39,6 @@ public class CameraChange : MonoBehaviour
         Visualcam2.SetActive(true);
 
     }
-    void BattlemodeactiveOff()
-    {
-        Visualcam1.SetActive(true);
-        Visualcam2.SetActive(false);
-
-    }
 
     private void OnTriggerEnter(Collider other)
     {
