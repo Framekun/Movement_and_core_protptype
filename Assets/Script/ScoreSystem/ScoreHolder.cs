@@ -6,6 +6,7 @@ public class ScoreHolder : MonoBehaviour
 {
     public int Score;
     [SerializeField] int ScoreReader; // is not supposed to be touched.
+    
     private void Awake()
     {
         if(PlayerPrefs.HasKey("ScoreHolder") == false)
