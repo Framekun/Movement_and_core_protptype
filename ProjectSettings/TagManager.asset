@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Hitbox
   - EnemyHitbox
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -44,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Effect
+    uniqueID: 3296541601
     locked: 0

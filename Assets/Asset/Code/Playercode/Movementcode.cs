@@ -24,6 +24,8 @@ public class Movementcode : MonoBehaviour
 
     private float _facingDirection = 1f;
 
+    private Vector3 _initialScale;
+
     public Vector3 ScreenForward
     {
         get
@@ -38,6 +40,11 @@ public class Movementcode : MonoBehaviour
         {
             return Vector3.ProjectOnPlane(_camera.transform.right, Vector3.up);
         }
+    }
+
+    private void Awake()
+    {
+        _initialScale = transform.localScale;
     }
 
     // Start is called before the first frame update
@@ -97,7 +104,7 @@ public class Movementcode : MonoBehaviour
 
     void AlignWithCam()
     {
-        transform.rotation = Quaternion.LookRotation(ScreenForward * _facingDirection, Vector3.up);
+        transform.rotation = Quaternion.LookRotation(ScreenForward , Vector3.up);
     }
 
     void Movement()
@@ -117,6 +124,7 @@ public class Movementcode : MonoBehaviour
         if (Input.GetKey(KeyCode.A) == true)
         {
             _facingDirection = -1f;
+            transform.localScale = new Vector3(-_initialScale.x, _initialScale.y, _initialScale.z);
             AlignWithCam();
             rb.velocity = -ScreenRight * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
             anim.SetBool("Isrunning", true);
@@ -125,6 +133,7 @@ public class Movementcode : MonoBehaviour
         if (Input.GetKey(KeyCode.D) == true)
         {
             _facingDirection = 1f;
+            transform.localScale = new Vector3(_initialScale.x, _initialScale.y, _initialScale.z);
             AlignWithCam();
             rb.velocity = ScreenRight * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
             anim.SetBool("Isrunning", true);
