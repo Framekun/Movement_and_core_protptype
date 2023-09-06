@@ -217,7 +217,7 @@ MonoBehaviour:
   targetrb: {fileID: 0}
   Player: {fileID: 816112590623724573}
   candamage: {fileID: 0}
-  stamina: {fileID: 5751742389104333890}
+  stamina: {fileID: 0}
   BaseAttack: 20
   Attack: 20
   knockx: 0
@@ -525,7 +525,7 @@ PrefabInstance:
     - target: {fileID: -7552582706839291426, guid: 67757dfadaaf2494d978f368fb7e2290,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -40.1
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 67757dfadaaf2494d978f368fb7e2290,
         type: 3}
@@ -1281,10 +1281,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 67757dfadaaf2494d978f368fb7e2290,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5751742389104333890}
-    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 67757dfadaaf2494d978f368fb7e2290,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3873836903453538135}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 67757dfadaaf2494d978f368fb7e2290,
         type: 3}
@@ -1400,7 +1396,7 @@ MonoBehaviour:
   HP: 100
   canmovecheck: 0
   Candamage: 1
-  Partical: {fileID: 0}
+  Partical: {fileID: 5008555603384663146}
 --- !u!114 &7583506177581827572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1413,7 +1409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f15cafc5b31755489fcb300e939638a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stamina: {fileID: 5751742389104333890}
   animator: {fileID: 5541399528170429763}
   rb: {fileID: 0}
   canattack: 1
@@ -1440,24 +1435,6 @@ MonoBehaviour:
     _shouldCheckRedStamina: 0
     _staminaBlueCost: 2
     _shouldCheckBlueStamina: 0
---- !u!114 &5751742389104333890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816112590623724573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8085fd5f72087274ea9d29850d980095, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redstamina: 20
-  bluestamina: 20
-  currentredstamina: 0
-  currentbluestamina: 0
-  Stamina_bar: {fileID: 0}
-  Stamina_bar2: {fileID: 0}
 --- !u!114 &3873836903453538135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,6 +1700,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
+--- !u!198 &5008555603384663146 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198157547220164012, guid: 4961a16ba01e09547be3e1c9d16d5ad0,
+    type: 3}
+  m_PrefabInstance: {fileID: 5133551575974158790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5129693265797945084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4043099551545146, guid: 4961a16ba01e09547be3e1c9d16d5ad0,

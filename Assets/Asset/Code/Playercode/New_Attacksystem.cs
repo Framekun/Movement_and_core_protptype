@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class New_Attacksystem : MonoBehaviour
 {
-    public Stamina_code stamina;
     public Animator animator;
     public Rigidbody rb;
     public bool canattack = true;
@@ -46,16 +45,12 @@ public class New_Attacksystem : MonoBehaviour
         foreach (AttackMove move in _attackMoves)
         {
             if (Input.GetKeyDown(move.AttackKey)
-                && (!move.ShouldCheckBlueStamina || stamina.currentbluestamina > 0)
-                && (!move.ShouldCheckRedStamina || stamina.currentredstamina > 0)
                 && (canattack || (move.PrevComboMoves.Contains(_latestAttackName) && _currentAttackState == AttackState.Recovering)))
             {
                 if (!string.IsNullOrWhiteSpace(move.AnimTriggerName))
                 {
                     animator.SetTrigger(move.AnimTriggerName);
                 }
-                stamina.currentbluestamina -= move.StaminaBlueCost;
-                stamina.currentredstamina -= move.StaminaRedCost;
 
                 delay = move.AttackDelay;
                 canattack = false;
