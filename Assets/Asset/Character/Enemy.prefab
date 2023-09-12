@@ -557,6 +557,7 @@ MonoBehaviour:
   player: {fileID: 0}
   HP: 100
   currentHP: 0
+  speed: 5
   attackCooldownTimer: 4
   HPBar: {fileID: 6923900335658136546}
   ShildBar: {fileID: 0}
