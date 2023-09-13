@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18386889, g: 0.22872588, b: 0.30142862, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -239,9 +239,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
         type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 492529003}
+    - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 330585545}
+    - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
+      propertyPath: _scoreHolder
+      value: 
+      objectReference: {fileID: 492529003}
     - target: {fileID: 3965643910703258534, guid: 15c22b4d26a85c04c863125396d38180,
         type: 3}
       propertyPath: m_RootOrder
@@ -1001,6 +1016,69 @@ MonoBehaviour:
   m_YawDamping: 0
   m_RollDamping: 0
   m_AngularDamping: 0
+--- !u!1 &492529001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 492529004}
+  - component: {fileID: 492529003}
+  - component: {fileID: 492529002}
+  m_Layer: 0
+  m_Name: Scoretesting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &492529002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492529001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b0dae3ea0762541ae8fb3a90e123e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RankARequirement: 50
+  RankBRequirement: 20
+  RankCRequirement: 10
+  RankDRequirement: 0
+--- !u!114 &492529003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492529001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e8f1ab533c1ae4fb95cdaba02f037e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoretest: 0
+  ScoreReader: 0
+--- !u!4 &492529004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492529001}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -46.224968, y: 1.0460727, z: 26.165222}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &535048130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1989310959223737470, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
@@ -1740,9 +1818,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
         type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 492529003}
+    - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 330585545}
+    - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
+      propertyPath: _scoreHolder
+      value: 
+      objectReference: {fileID: 492529003}
     - target: {fileID: 3965643910703258534, guid: 15c22b4d26a85c04c863125396d38180,
         type: 3}
       propertyPath: m_RootOrder
@@ -1841,9 +1934,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 492529003}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1867527041}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 330585545}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
+      propertyPath: _scoreHolder
+      value: 
+      objectReference: {fileID: 492529003}
     - target: {fileID: 3746199577869267511, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
       propertyPath: m_RootOrder
@@ -2316,6 +2424,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 492529003}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
@@ -2326,9 +2439,19 @@ PrefabInstance:
       objectReference: {fileID: 1867527041}
     - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 330585545}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
       propertyPath: blueType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
+      propertyPath: _scoreHolder
+      value: 
+      objectReference: {fileID: 492529003}
     - target: {fileID: 3746199577869267510, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
       propertyPath: m_IsTrigger
@@ -2579,6 +2702,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy3
       objectReference: {fileID: 0}
+    - target: {fileID: 5998472549989426281, guid: 0fc2e5333323835468691166906d30dd,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 492529003}
+    - target: {fileID: 5998472549989426281, guid: 0fc2e5333323835468691166906d30dd,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 330585545}
+    - target: {fileID: 5998472549989426281, guid: 0fc2e5333323835468691166906d30dd,
+        type: 3}
+      propertyPath: _scoreHolder
+      value: 
+      objectReference: {fileID: 492529003}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2603,3 +2741,4 @@ SceneRoots:
   - {fileID: 1133402465}
   - {fileID: 914397379}
   - {fileID: 1912069450}
+  - {fileID: 492529004}

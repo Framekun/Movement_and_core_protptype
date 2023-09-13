@@ -7,7 +7,6 @@ using TMPro;
 public class ScoreReader : MonoBehaviour
 {
     [SerializeField] TMP_Text ScoreDisplay;
-    int Score = PlayerPrefs.GetInt("ScoreHolder");
     // Start is called before the first frame update
 
 

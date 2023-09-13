@@ -14,7 +14,7 @@ public class newEnemy : MonoBehaviour
     [SerializeField] private float attackCooldown = 2f;
     [SerializeField] AudioSource Knocksound;
     [SerializeField] private Camera _camera;
-    public Hitboxcode player;
+    [SerializeField] private ScoreHolder _scoreHolder;
     private float difDistance;
     bool canmove;
     public float HP;
@@ -86,6 +86,7 @@ public class newEnemy : MonoBehaviour
         }
         if (currentHP <= 0)
         {
+            _scoreHolder.scoretest += 10;
             Dead();
         }
     }
@@ -170,6 +171,7 @@ public class newEnemy : MonoBehaviour
     }
     void Dead()
     {
+        
         _controller?.HandleEnemyDeath(this);
         Destroy(gameObject); 
     }
