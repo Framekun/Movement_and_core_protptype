@@ -13,6 +13,7 @@ public class newEnemy : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private float attackCooldown = 2f;
     [SerializeField] AudioSource Knocksound;
+    [SerializeField] private Camera _camera;
     public Hitboxcode player;
     private float difDistance;
     bool canmove;
@@ -29,6 +30,29 @@ public class newEnemy : MonoBehaviour
     public ParticleSystem Partical01;
     public ParticleSystem Partical02;
 
+    private Vector3 _initialScale;
+
+    public Vector3 ScreenForward
+    {
+        get
+        {
+            return Vector3.ProjectOnPlane(_camera.transform.forward, Vector3.up);
+        }
+    }
+
+    public Vector3 ScreenRight
+    {
+        get
+        {
+            return Vector3.ProjectOnPlane(_camera.transform.right, Vector3.up);
+        }
+    }
+
+    private void Awake()
+    {
+        _initialScale = transform.localScale;
+    }
+
     void Start()
     {
         currentHP = HP;
@@ -42,8 +66,10 @@ public class newEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(canmove) 
+        AlignWithCam();
+
+
+        if (canmove) 
         {
             Enemymovement();
             Rotation();
@@ -69,6 +95,10 @@ public class newEnemy : MonoBehaviour
         UpdateTimers();
     }
 
+    void AlignWithCam()
+    {
+        transform.rotation = Quaternion.LookRotation(ScreenForward, Vector3.up);
+    }
     public void SetController(Enemycontrolscript controller)
     {
         _controller = controller;

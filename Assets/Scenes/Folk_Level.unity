@@ -686,6 +686,11 @@ PrefabInstance:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
     - target: {fileID: 3965643910703258534, guid: 15c22b4d26a85c04c863125396d38180,
         type: 3}
       propertyPath: m_RootOrder
@@ -3212,6 +3217,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
     - target: {fileID: 3746199577869267511, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
       propertyPath: m_RootOrder
@@ -6555,6 +6565,11 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
     - target: {fileID: 3965643910703258534, guid: 15c22b4d26a85c04c863125396d38180,
         type: 3}
       propertyPath: m_RootOrder
@@ -8370,6 +8385,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5998472549989426281, guid: 0fc2e5333323835468691166906d30dd,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8978,6 +8998,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy3
       objectReference: {fileID: 0}
+    - target: {fileID: 5998472549989426281, guid: 0fc2e5333323835468691166906d30dd,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9434,6 +9459,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5998472549989426281, guid: 0fc2e5333323835468691166906d30dd,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19433,6 +19463,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
       propertyPath: blueType
       value: 0
       objectReference: {fileID: 0}
@@ -21641,6 +21676,11 @@ PrefabInstance:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
     - target: {fileID: 3965643910703258534, guid: 15c22b4d26a85c04c863125396d38180,
         type: 3}
       propertyPath: m_RootOrder
@@ -25279,6 +25319,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
     - target: {fileID: 3746199577869267511, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
       propertyPath: m_RootOrder
@@ -25878,6 +25923,11 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
     - target: {fileID: 3965643910703258534, guid: 15c22b4d26a85c04c863125396d38180,
         type: 3}
       propertyPath: m_RootOrder
@@ -28163,6 +28213,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assetchar Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1721335213561376560, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1989310959223737470, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28218,6 +28273,11 @@ PrefabInstance:
       propertyPath: HPBar
       value: 
       objectReference: {fileID: 407301706}
+    - target: {fileID: 5560630350151926641, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5751742389104333890, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
       propertyPath: Stamina_bar
@@ -28230,10 +28290,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6813398813522911787, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6813398813522911787, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 24300002, guid: cfae46ca0d6ad3044a1a2d7392270600,
         type: 2}
+    - target: {fileID: 8373351312651324636, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9118297764464964454, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
       propertyPath: _camera
@@ -29104,6 +29174,11 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
     - target: {fileID: 3965643910703258534, guid: 15c22b4d26a85c04c863125396d38180,
         type: 3}
       propertyPath: m_RootOrder
@@ -32159,6 +32234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
       propertyPath: blueType
       value: 0
       objectReference: {fileID: 0}
@@ -32313,6 +32393,11 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3965643910703258526, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 428879974}
     - target: {fileID: 3965643910703258534, guid: 15c22b4d26a85c04c863125396d38180,
         type: 3}
       propertyPath: m_RootOrder
