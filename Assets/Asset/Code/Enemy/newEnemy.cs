@@ -12,6 +12,7 @@ public class newEnemy : MonoBehaviour
     [SerializeField] private float zStopDistance = 0.5f;
     [SerializeField] private Animator anim;
     [SerializeField] private float attackCooldown = 2f;
+    [SerializeField] AudioSource Knocksound;
     public Hitboxcode player;
     private float difDistance;
     bool canmove;
@@ -25,7 +26,6 @@ public class newEnemy : MonoBehaviour
     bool readytoattack = false;
     public float attackCooldownTimer;
     public Image HPBar;
-    public Image ShildBar;
     public ParticleSystem Partical01;
     public ParticleSystem Partical02;
 
@@ -171,6 +171,7 @@ public class newEnemy : MonoBehaviour
     public void TakeHit(Hitboxcode hitbox)
     {
         anim.SetTrigger("Damage");
+        Knocksound.Play();
         canmove= false;
         readytoattack = false;
         Damageget = hitbox.Attack;

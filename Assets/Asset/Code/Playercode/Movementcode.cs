@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Movementcode : MonoBehaviour
 {
@@ -8,7 +9,9 @@ public class Movementcode : MonoBehaviour
     [SerializeField] float Speed = 15;
     [SerializeField] float Jumppower = 10;
     [SerializeField] float DecelerationWhileAttacking = 40f;
-
+    [SerializeField] AudioSource Footsound;
+    [SerializeField] AudioSource Jumpsound;
+    [SerializeField] AudioSource Knocksound;
     [SerializeField] private Camera _camera;
 
     public AttackBox Damage;
@@ -115,11 +118,13 @@ public class Movementcode : MonoBehaviour
         {
             rb.velocity = ScreenForward * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenForward);
             anim.SetBool("Isrunning", true);
+            Footsound.Play();
         }
         if (Input.GetKey(KeyCode.S) == true)
         {
             rb.velocity = -ScreenForward * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenForward);
             anim.SetBool("Isrunning", true);
+            Footsound.Play();
         }
         if (Input.GetKey(KeyCode.A) == true)
         {
@@ -128,7 +133,7 @@ public class Movementcode : MonoBehaviour
             AlignWithCam();
             rb.velocity = -ScreenRight * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
             anim.SetBool("Isrunning", true);
-
+            Footsound.Play();
         }
         if (Input.GetKey(KeyCode.D) == true)
         {
@@ -137,12 +142,16 @@ public class Movementcode : MonoBehaviour
             AlignWithCam();
             rb.velocity = ScreenRight * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
             anim.SetBool("Isrunning", true);
+            Footsound.Play();
         }
         else if (Input.GetKey(KeyCode.W) == false && Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.S) == false && Input.GetKey(KeyCode.D) == false)
         {
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
             anim.SetBool("Isrunning", false);
+            Footsound.Stop();
+
         }
+
     }
 
     void Jump()
@@ -154,6 +163,7 @@ public class Movementcode : MonoBehaviour
             rb.AddForce(Jumpig,ForceMode.Impulse);
             rb.velocity = Jumpig;
             Onground = false;
+            Jumpsound.Play();
         }
     }
 
@@ -213,7 +223,7 @@ public class Movementcode : MonoBehaviour
                 anim.SetTrigger("Damage");
                 Partical.Play();
                 Candamage = false;
-
+                Knocksound.Play();
             }  
         }
     }

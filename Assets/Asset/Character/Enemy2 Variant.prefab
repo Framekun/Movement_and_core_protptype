@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4423811066742071616, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6923900335658136546, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
       propertyPath: m_FillAmount

@@ -5,8 +5,7 @@ using UnityEngine;
 public class Enemycode : MonoBehaviour
 {
     [SerializeField] Rigidbody enemyrb;
-    [SerializeField] public bool redType;
-    [SerializeField] public bool blueType;
+    [SerializeField] AudioSource Knocksound;
     public int currentHP;
     int Damageget;
     public Hitboxcode player;
@@ -14,16 +13,13 @@ public class Enemycode : MonoBehaviour
     public GameObject Playercharacter;
     public Rigidbody Enemycharacter;
     public Animator animator;
-    public Stamina_code stamina;
     float speed = 2f;
     bool isattacked = false;
     public bool canmove = true;
     public bool Canattack = true;
     public float delay = 0;
-    float attackdelay = 2.0f;
     float maxdelay = 0.5f;
     public bool candamageable = true;
-    public bool isGuardtype;
 
     private Enemycontrolscript _controller;
 
@@ -38,7 +34,7 @@ public class Enemycode : MonoBehaviour
         if(isattacked == false)
         {
             enemyMovement();
-            //Attack();
+            Attack();
         }
 
         if (isattacked == true)
@@ -122,7 +118,7 @@ public class Enemycode : MonoBehaviour
                 isattacked = true;
                 Damageget = player.Attack;
                 currentHP -= Damageget;
-
+                Knocksound.Play();
             }
            
         }

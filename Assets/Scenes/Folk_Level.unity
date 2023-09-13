@@ -5609,7 +5609,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 0.7
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -13833,7 +13833,7 @@ MonoBehaviour:
     m_SecondaryNoise: {fileID: 0}
     m_AmplitudeGain: 1
     m_FrequencyGain: 1
-    m_Duration: 1
+    m_Duration: 0.5
     m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1001 &1139950349
 PrefabInstance:
@@ -26204,7 +26204,7 @@ MonoBehaviour:
     m_SecondaryNoise: {fileID: 0}
     m_AmplitudeGain: 1
     m_FrequencyGain: 1
-    m_Duration: 1
+    m_Duration: 0.5
     m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!114 &2072014945
 MonoBehaviour:
