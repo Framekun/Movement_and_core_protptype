@@ -8,7 +8,7 @@ public class ScoreRankingSystem : MonoBehaviour
     [SerializeField] int RankBRequirement;
     [SerializeField] int RankCRequirement;
     [SerializeField] int RankDRequirement;
-    int ScoreRecieved = PlayerPrefs.GetInt("ScoreHolder");
+    int ScoreRecieved;
     void Start()
     {
         
@@ -17,7 +17,8 @@ public class ScoreRankingSystem : MonoBehaviour
 
     void Update()
     {
-        if(RankDRequirement > ScoreRecieved)
+        int ScoreRecieved = PlayerPrefs.GetInt("ScoreHolder");
+        if (RankDRequirement > ScoreRecieved)
         {
 
         }
