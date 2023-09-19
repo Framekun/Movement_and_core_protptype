@@ -86,7 +86,7 @@ public class newEnemy : MonoBehaviour
         }
         if (currentHP <= 0)
         {
-            _scoreHolder.scoretest += 10;
+            //_scoreHolder.scoretest += 10;
             Dead();
         }
     }
