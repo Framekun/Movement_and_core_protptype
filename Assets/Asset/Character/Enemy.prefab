@@ -556,7 +556,8 @@ MonoBehaviour:
   anim: {fileID: 3746199577869267505}
   attackCooldown: 5
   Knocksound: {fileID: 4423811066742071616}
-  player: {fileID: 0}
+  _camera: {fileID: 0}
+  _scoreHolder: {fileID: 0}
   HP: 100
   currentHP: 0
   speed: 5

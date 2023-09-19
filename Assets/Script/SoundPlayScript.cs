@@ -17,11 +17,11 @@ public class SoundPlayScript : MonoBehaviour
         if(AudioPlay == true)
         {
             AudioPlace.Play();
-            AudioPlace.loop = true;
+            
         }
         else
         {
-            AudioPlace.loop = false;
+            AudioPlace.Stop();
         }
     }
 

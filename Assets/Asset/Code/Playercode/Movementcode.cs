@@ -9,16 +9,16 @@ public class Movementcode : MonoBehaviour
     [SerializeField] float Speed = 15;
     [SerializeField] float Jumppower = 10;
     [SerializeField] float DecelerationWhileAttacking = 40f;
-    [SerializeField] AudioSource Footsound;
     [SerializeField] AudioSource Jumpsound;
     [SerializeField] AudioSource Knocksound;
+    [SerializeField] HP_code HP;
+    
     [SerializeField] private Camera _camera;
 
-    public AttackBox Damage;
+    public Enemy_Hitbox Damage;
     public Animator anim;
     public bool Onground = true;
     bool isrolling = false;
-    public int HP;
     bool canmove = true;
     public bool canmovecheck;
     public bool Candamage = true;
@@ -53,7 +53,6 @@ public class Movementcode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Damage = FindObjectOfType<AttackBox>();
         Partical.Stop();
     }
 
@@ -118,13 +117,11 @@ public class Movementcode : MonoBehaviour
         {
             rb.velocity = ScreenForward * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenForward);
             anim.SetBool("Isrunning", true);
-            Footsound.Play();
         }
         if (Input.GetKey(KeyCode.S) == true)
         {
             rb.velocity = -ScreenForward * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenForward);
             anim.SetBool("Isrunning", true);
-            Footsound.Play();
         }
         if (Input.GetKey(KeyCode.A) == true)
         {
@@ -133,7 +130,6 @@ public class Movementcode : MonoBehaviour
             AlignWithCam();
             rb.velocity = -ScreenRight * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
             anim.SetBool("Isrunning", true);
-            Footsound.Play();
         }
         if (Input.GetKey(KeyCode.D) == true)
         {
@@ -142,14 +138,11 @@ public class Movementcode : MonoBehaviour
             AlignWithCam();
             rb.velocity = ScreenRight * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
             anim.SetBool("Isrunning", true);
-            Footsound.Play();
         }
         else if (Input.GetKey(KeyCode.W) == false && Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.S) == false && Input.GetKey(KeyCode.D) == false)
         {
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
             anim.SetBool("Isrunning", false);
-            Footsound.Stop();
-
         }
 
     }
@@ -217,6 +210,7 @@ public class Movementcode : MonoBehaviour
     {
         if (other.gameObject.tag == "EnemyHitbox")
         {
+            //Damage = other.GetComponent<AttackBox>();
             if(Candamage == true)
             {
                 canmove = false;
@@ -224,6 +218,7 @@ public class Movementcode : MonoBehaviour
                 Partical.Play();
                 Candamage = false;
                 Knocksound.Play();
+                HP.currentHp -= 30.0f;
             }  
         }
     }

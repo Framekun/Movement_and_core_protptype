@@ -10,7 +10,7 @@ public class New_Attacksystem : MonoBehaviour
     public Movementcode movement;
     //bool Airattack;
     float delay;
-
+    [SerializeField] AudioSource Attacksound;
     [SerializeField] private AttackState _currentAttackState = AttackState.NotAttacking;
     public AttackState CurrentAttackState => _currentAttackState;
 
@@ -50,6 +50,7 @@ public class New_Attacksystem : MonoBehaviour
                 if (!string.IsNullOrWhiteSpace(move.AnimTriggerName))
                 {
                     animator.SetTrigger(move.AnimTriggerName);
+                    Attacksound.Play();
                 }
 
                 delay = move.AttackDelay;
