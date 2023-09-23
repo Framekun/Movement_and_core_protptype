@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetrb: {fileID: 0}
   Enemychar: {fileID: 3746199577869267512}
-  Attack: 10
+  Attack: 5
 --- !u!1 &3746199576593371150
 GameObject:
   m_ObjectHideFlags: 0
