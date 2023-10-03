@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HP_code : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class HP_code : MonoBehaviour
             currentHp = 0;
             Debug.Log("Game_over");
             gameObject.SetActive(false);
+            SceneManager.LoadScene(3);
         }
     }
     void Filler()
