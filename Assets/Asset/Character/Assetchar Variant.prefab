@@ -1822,7 +1822,7 @@ MonoBehaviour:
   _currentAttackState: 0
   _attackMoves:
   - _moveName: LeftClick
-    _attackDelay: 1
+    _attackDelay: 0.2
     _prevComboMoves:
     - RightClick
     _attackKey: 323
@@ -1832,7 +1832,7 @@ MonoBehaviour:
     _staminaBlueCost: 0
     _shouldCheckBlueStamina: 0
   - _moveName: RightClick
-    _attackDelay: 1
+    _attackDelay: 0.2
     _prevComboMoves:
     - LeftClick
     _attackKey: 324
