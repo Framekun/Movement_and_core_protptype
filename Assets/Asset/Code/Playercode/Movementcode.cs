@@ -15,7 +15,7 @@ public class Movementcode : MonoBehaviour
     
     [SerializeField] private Camera _camera;
 
-    public Enemy_Hitbox Damage;
+    public AttackBox Damage;
     public Animator anim;
     public bool Onground = true;
     bool isrolling = false;
@@ -210,7 +210,7 @@ public class Movementcode : MonoBehaviour
     {
         if (other.gameObject.tag == "EnemyHitbox")
         {
-            //Damage = other.GetComponent<AttackBox>();
+            Damage = other.GetComponent<AttackBox>();
             if(Candamage == true)
             {
                 canmove = false;
@@ -218,7 +218,7 @@ public class Movementcode : MonoBehaviour
                 Partical.Play();
                 Candamage = false;
                 Knocksound.Play();
-                HP.currentHp -= 30.0f;
+                HP.currentHp -= Damage.Attack;
             }  
         }
     }
