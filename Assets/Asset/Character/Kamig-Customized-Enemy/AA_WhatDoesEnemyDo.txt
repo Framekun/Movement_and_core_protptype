@@ -1,14 +1,44 @@
 So, I decided to write this to tell what does what.
 
+((This comes from when Player Has 1000 HP, Speed of 20, "Mass" of 10, "Drag" of 0))
+
+
 - The BigBad is Giant type of enemy, should have dodgeable attack, slow and have holes, but very punishing if hit. 
 Also have alot of health and is slow (inital speed boost recommended)
+HP: 150
+Speed: 5
+Attack Cooldown: 2
+Damage: 100
+Other Stuff: "Mass" of 5 and "Drag" of 1. Mass causes heavier screenshake.
+Note: !! HUGE MAN !!
 
 - The Bomber is Suicidal Bomber, They die when they attacked. 
 The attack should have delay and deal big damage when it was not intercepted. 
+HP: 5
+Speed: 15
+Attack Cooldown: 1
+Damage: 100
+Other Stuff: Dies on attack
+Note: This comes from the bug where player can hurt enemy when hurted.
 
 - The Charger is Slow... until they decided to attack. They attack in straight line. trying to hit the player.
+HP: 100
+Speed: 10 / 50
+Attack Cooldown: 10
+Damage: 100
+Other Stuff: "Mass" of 5 and "Drag" of 1. Mass causes heavier screenshake.
 
 - The Shealth is trasparent and does not have their HP shown. Recommend for ambush attack
+HP: 50
+Speed: 10
+Attack Cooldown: 5
+Damage: 20
+Other Stuff: Have trasparent body and hide HP bar.
 
 - The Windup has high damage, but the attack requires a little bit of winding up
 If regular enemy have winding up, this will be slower or very noticeable.
+HP: 150
+Speed: 20
+Attack Cooldown: 5
+Damage: 100
+Other Stuff: Have wind up animation before the attack starts to register (being do attack animation but do not turn on attack hitbox on start of animation)
