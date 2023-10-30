@@ -1966,7 +1966,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1867527041}
+      objectReference: {fileID: 0}
     - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
       propertyPath: _camera
@@ -2060,18 +2060,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1642967428}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1867527041 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5251429249408728987, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
-    type: 3}
-  m_PrefabInstance: {fileID: 2642141683935909048}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa5fa8d982fc1eb4e871bd7279381862, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1912069448
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,10 +2211,20 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 790011403256421654, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 816112590623724573, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
       propertyPath: m_Name
       value: Assetchar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465760832208027550, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1989310959223737470, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
@@ -2278,6 +2276,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2089715086322562791, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2179026355464467904, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
       propertyPath: m_CastShadows
@@ -2317,6 +2320,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_DynamicOccludee
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421387871039809990, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3476249282172240878, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
@@ -2338,6 +2346,11 @@ PrefabInstance:
       propertyPath: HPBar
       value: 
       objectReference: {fileID: 982018025}
+    - target: {fileID: 4547193359972994888, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4608509660534205032, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
       propertyPath: m_Pitch
@@ -2353,6 +2366,11 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4652186900398701622, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4678470666503679043, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
       propertyPath: m_CastShadows
@@ -2372,6 +2390,61 @@ PrefabInstance:
         type: 3}
       propertyPath: m_DynamicOccludee
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892131213265872844, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008555603384663146, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.maxCurve.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008555603384663146, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.minCurve.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008555603384663146, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.maxCurve.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008555603384663146, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minCurve.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008555603384663146, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: InitialModule.startRotation.maxCurve.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008555603384663146, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: InitialModule.startRotation.minCurve.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008555603384663146, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: InitialModule.startRotationX.maxCurve.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008555603384663146, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: InitialModule.startRotationX.minCurve.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008555603384663146, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: InitialModule.startRotationY.maxCurve.m_RotationOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008555603384663146, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: InitialModule.startRotationY.minCurve.m_RotationOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5251429249408728987, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
@@ -2398,6 +2471,11 @@ PrefabInstance:
       propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5716127521029200991, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5751742389104333890, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
       propertyPath: Stamina_bar
@@ -2406,6 +2484,21 @@ PrefabInstance:
     - target: {fileID: 5751742389104333890, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
       propertyPath: Stamina_bar2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800038734894128573, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035919552419023598, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6535712557249499854, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6813398813522911787, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
@@ -2443,6 +2536,16 @@ PrefabInstance:
       propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7777253581582872147, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630811050095786500, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
+        type: 3}
+      propertyPath: m_BoneTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8634756744281744749, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
         type: 3}
       propertyPath: m_CastShadows
@@ -2466,7 +2569,20 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 8373351312651324636, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 714539288262816966, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
+    - {fileID: 4616810442421796514, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
+    - {fileID: 1544472678356937858, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
+    - {fileID: 6582254059103168513, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
+    - {fileID: 6474378997274282497, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
+    - {fileID: 731359972714029266, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
+    - {fileID: 6407218026937279473, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
+    - {fileID: 5875644991385551584, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
+    - {fileID: 1017335591885057994, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
+    - {fileID: 3135226280653187652, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
+    - {fileID: 5662141488303038930, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
+    - {fileID: 4661297383378115523, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
+    - {fileID: 601083256131612623, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7399329957684610233, guid: 226a1ffd9cc41cb489ee9bf3da6adeb8,
@@ -2501,7 +2617,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1867527041}
+      objectReference: {fileID: 0}
     - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
       propertyPath: _camera
