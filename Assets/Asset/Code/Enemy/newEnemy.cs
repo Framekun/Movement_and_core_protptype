@@ -15,6 +15,7 @@ public class newEnemy : MonoBehaviour
     [SerializeField] AudioSource Knocksound;
     [SerializeField] private Camera _camera;
     [SerializeField] private ScoreHolder _scoreHolder;
+    [SerializeField] private bool ishit;
     private float difDistance;
     bool canmove;
     public float HP;
@@ -80,11 +81,12 @@ public class newEnemy : MonoBehaviour
             delay += Time.deltaTime;
             if (delay >= 2f)
             {
+                ishit = false;
                 canmove = true;
                 delay = 0;
             }
         }
-        if (currentHP <= 0)
+        if (currentHP <= 0 && ishit == false)
         {
             //_scoreHolder.scoretest += 10;
             Dead();
@@ -208,5 +210,6 @@ public class newEnemy : MonoBehaviour
         readytoattack = false;
         Damageget = hitbox.Attack;
         currentHP -= Damageget;
+        ishit = true;
     }
 }

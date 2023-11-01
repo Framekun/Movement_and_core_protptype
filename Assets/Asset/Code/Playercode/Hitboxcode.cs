@@ -10,8 +10,8 @@ public class Hitboxcode : MonoBehaviour
     public GameObject Player;
     public Enemycode candamage;
     public Stamina_code stamina;
-    public int BaseAttack = 20;
-    public int Attack = 20;
+    public int BaseAttack;
+    public int Attack;
     public float knockx;
     public float knocky;
     public CinemachineImpulseSource cinima;

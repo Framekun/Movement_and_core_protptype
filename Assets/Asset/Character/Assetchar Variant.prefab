@@ -1,5 +1,82 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3448894322388252100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2779574257394730151}
+  - component: {fileID: 5779317627882155155}
+  - component: {fileID: 6797495806297240918}
+  m_Layer: 6
+  m_Name: Hitbox
+  m_TagString: Hitbox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2779574257394730151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3448894322388252100}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1989310959223737470}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &5779317627882155155
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3448894322388252100}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6797495806297240918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3448894322388252100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa5fa8d982fc1eb4e871bd7279381862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetrb: {fileID: 126136027325746434}
+  Player: {fileID: 816112590623724573}
+  candamage: {fileID: 0}
+  stamina: {fileID: 0}
+  BaseAttack: 20
+  Attack: 20
+  knockx: 0
+  knocky: 0
+  cinima: {fileID: 0}
 --- !u!1 &7390755196095196072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,6 +1310,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4668269748652828504}
+    - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 67757dfadaaf2494d978f368fb7e2290,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2779574257394730151}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 67757dfadaaf2494d978f368fb7e2290,
         type: 3}
@@ -1376,7 +1457,7 @@ MonoBehaviour:
   Damage: {fileID: 0}
   anim: {fileID: 5541399528170429763}
   Onground: 1
-  canmovecheck: 0
+  canmovecheck: 1
   Candamage: 1
   Partical: {fileID: 5008555603384663146}
 --- !u!114 &7583506177581827572
@@ -1398,25 +1479,34 @@ MonoBehaviour:
   Attacksound: {fileID: 807953777754543529}
   _currentAttackState: 0
   _attackMoves:
-  - _moveName: LeftClick
-    _attackDelay: 0.2
-    _prevComboMoves:
-    - RightClick
+  - _moveName: N_atk01
+    _attackDelay: 0.5
+    _prevComboMoves: []
     _attackKey: 323
-    _animTriggerName: N_atk02
-    _staminaRedCost: 2
-    _shouldCheckRedStamina: 0
-    _staminaBlueCost: 0
-    _shouldCheckBlueStamina: 0
-  - _moveName: RightClick
-    _attackDelay: 0.2
-    _prevComboMoves:
-    - LeftClick
-    _attackKey: 324
     _animTriggerName: N_atk01
     _staminaRedCost: 0
     _shouldCheckRedStamina: 0
-    _staminaBlueCost: 2
+    _staminaBlueCost: 0
+    _shouldCheckBlueStamina: 0
+  - _moveName: N_atk02
+    _attackDelay: 0.7
+    _prevComboMoves:
+    - N_atk01
+    _attackKey: 323
+    _animTriggerName: N_atk02
+    _staminaRedCost: 0
+    _shouldCheckRedStamina: 0
+    _staminaBlueCost: 0
+    _shouldCheckBlueStamina: 0
+  - _moveName: N_atk03
+    _attackDelay: 1
+    _prevComboMoves:
+    - N_atk02
+    _attackKey: 323
+    _animTriggerName: N_atk03
+    _staminaRedCost: 0
+    _shouldCheckRedStamina: 0
+    _staminaBlueCost: 0
     _shouldCheckBlueStamina: 0
 --- !u!114 &3873836903453538135
 MonoBehaviour:

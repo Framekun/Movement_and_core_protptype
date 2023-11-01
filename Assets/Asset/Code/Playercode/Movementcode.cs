@@ -61,12 +61,11 @@ public class Movementcode : MonoBehaviour
     {
         AlignWithCam();
 
-        canmovecheck = canmove;
+        canmove = canmovecheck;
         if (canmove == true)
         {
             Movement();
             Jump();
-            Rolling();
             Candamage = true;
         }
         if(Candamage == false)
@@ -160,27 +159,6 @@ public class Movementcode : MonoBehaviour
         }
     }
 
-    void Rolling()
-    {
-        Vector3 Roll = new Vector3(30, 0, rb.velocity.z);
-        Vector3 Roll2 = new Vector3(-30, 0, rb.velocity.z);
-        if (Input.GetKeyDown(KeyCode.LeftShift)) 
-        {
-            if(rb.transform.eulerAngles.y == 0)
-            {
-                rb.velocity = Roll;
-
-            }
-            if (rb.transform.eulerAngles.y == 180)
-            {
-                rb.velocity = Roll2;
-
-            }
-            anim.SetTrigger("Rolling");
-            isrolling = true;
-
-        }
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
