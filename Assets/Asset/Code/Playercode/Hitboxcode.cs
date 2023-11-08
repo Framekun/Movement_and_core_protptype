@@ -8,8 +8,6 @@ public class Hitboxcode : MonoBehaviour
     // Start is called before the first frame update
     public Rigidbody targetrb;
     public GameObject Player;
-    public Enemycode candamage;
-    public Stamina_code stamina;
     public int BaseAttack;
     public int Attack;
     public float knockx;
