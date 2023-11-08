@@ -20,8 +20,8 @@ public class AttackBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Vector3 Knock1 = new Vector3(100, 30, 0);
-        Vector3 Knock2 = new Vector3(-100, 30, 0);
+        Vector3 Knock1 = new Vector3(500, 30, 0);
+        Vector3 Knock2 = new Vector3(-500, 30, 0);
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("HIT");

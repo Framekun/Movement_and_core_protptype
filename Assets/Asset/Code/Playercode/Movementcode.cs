@@ -19,8 +19,8 @@ public class Movementcode : MonoBehaviour
     public Animator anim;
     public bool Onground = true;
     bool isrolling = false;
-    bool canmove = true;
-    public bool canmovecheck;
+    public bool canmove => canmovecheck;
+    [SerializeField] private bool canmovecheck;
     public bool Candamage = true;
     float delay = 0;
     public ParticleSystem Partical;
@@ -61,8 +61,7 @@ public class Movementcode : MonoBehaviour
     {
         AlignWithCam();
 
-        canmove = canmovecheck;
-        if (canmove == true)
+        if (canmovecheck == true)
         {
             Movement();
             Jump();
@@ -83,15 +82,6 @@ public class Movementcode : MonoBehaviour
             planeVelocity.y = 0f;
             planeVelocity = Vector3.MoveTowards(planeVelocity, Vector3.zero, Time.deltaTime * DecelerationWhileAttacking);
             rb.velocity = new Vector3(planeVelocity.x, rb.velocity.y, planeVelocity.z);
-        }
-        if(canmove == false)
-        {
-            delay += Time.deltaTime;
-            if(delay > 1f)
-            {
-                canmove = true;
-                delay = 0f;
-            }
         }
         if (Onground == false)
         {
@@ -191,7 +181,6 @@ public class Movementcode : MonoBehaviour
             Damage = other.GetComponent<AttackBox>();
             if(Candamage == true)
             {
-                canmove = false;
                 anim.SetTrigger("Damage");
                 Partical.Play();
                 Candamage = false;

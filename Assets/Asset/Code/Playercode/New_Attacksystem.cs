@@ -34,7 +34,7 @@ public class New_Attacksystem : MonoBehaviour
                 canattack = true;
             }
         }
-        if(movement.canmovecheck == true)
+        if(movement.canmove == true)
         {
             Attackcode();
         }
