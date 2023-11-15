@@ -54,7 +54,7 @@ CapsuleCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 1
-  m_Direction: 1
+  m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6797495806297240918
 MonoBehaviour:
@@ -68,12 +68,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5fa8d982fc1eb4e871bd7279381862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetrb: {fileID: 126136027325746434}
+  targetrb: {fileID: 0}
   Player: {fileID: 816112590623724573}
-  candamage: {fileID: 0}
-  stamina: {fileID: 0}
   BaseAttack: 20
-  Attack: 20
+  Attack: 0
   knockx: 0
   knocky: 0
   cinima: {fileID: 0}
@@ -561,7 +559,7 @@ PrefabInstance:
     - target: {fileID: -7552582706839291426, guid: 67757dfadaaf2494d978f368fb7e2290,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.1
+      value: -51.3
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 67757dfadaaf2494d978f368fb7e2290,
         type: 3}
@@ -571,7 +569,7 @@ PrefabInstance:
     - target: {fileID: -7552582706839291426, guid: 67757dfadaaf2494d978f368fb7e2290,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.3754113
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 67757dfadaaf2494d978f368fb7e2290,
         type: 3}
@@ -1453,6 +1451,8 @@ MonoBehaviour:
   Jumpsound: {fileID: 1721335213561376560}
   Knocksound: {fileID: 4268477695922797629}
   HP: {fileID: 3873836903453538135}
+  pushforce: 10
+  pushNow: 0
   _camera: {fileID: 0}
   Damage: {fileID: 0}
   anim: {fileID: 5541399528170429763}
@@ -1473,7 +1473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5541399528170429763}
-  rb: {fileID: 0}
+  rb: {fileID: 126136027325746434}
   canattack: 1
   movement: {fileID: 9118297764464964454}
   Attacksound: {fileID: 807953777754543529}
@@ -1504,6 +1504,25 @@ MonoBehaviour:
     - N_atk02
     _attackKey: 323
     _animTriggerName: N_atk03
+    _staminaRedCost: 0
+    _shouldCheckRedStamina: 0
+    _staminaBlueCost: 0
+    _shouldCheckBlueStamina: 0
+  - _moveName: L_atk01
+    _attackDelay: 1
+    _prevComboMoves: []
+    _attackKey: 324
+    _animTriggerName: L_atk01
+    _staminaRedCost: 0
+    _shouldCheckRedStamina: 0
+    _staminaBlueCost: 0
+    _shouldCheckBlueStamina: 0
+  - _moveName: L_atk02
+    _attackDelay: 1
+    _prevComboMoves:
+    - L_atk01
+    _attackKey: 324
+    _animTriggerName: L_atk02
     _staminaRedCost: 0
     _shouldCheckRedStamina: 0
     _staminaBlueCost: 0
