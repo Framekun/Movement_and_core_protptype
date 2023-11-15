@@ -52,6 +52,7 @@ public class newEnemy : MonoBehaviour
     private void Awake()
     {
         _initialScale = transform.localScale;
+        _camera = FindAnyObjectByType<Camera>();
     }
 
     void Start()

@@ -12,7 +12,8 @@ public class Movementcode : MonoBehaviour
     [SerializeField] AudioSource Jumpsound;
     [SerializeField] AudioSource Knocksound;
     [SerializeField] HP_code HP;
-    
+    [SerializeField] float pushforce;
+    [SerializeField] bool pushNow = false;
     [SerializeField] private Camera _camera;
 
     public AttackBox Damage;
@@ -75,6 +76,10 @@ public class Movementcode : MonoBehaviour
                 Candamage = true;
                 delay = 0f;
             }
+        }
+        if(pushNow == true)
+        {
+            pushcharacter();
         }
         else
         {
@@ -195,13 +200,19 @@ public class Movementcode : MonoBehaviour
         isrolling= false;
     }
 
-    public void AddforceattackX(float forceStrength)
+   void pushcharacter()
     {
-        rb.AddRelativeForce(new Vector3(forceStrength, 0f, 0f), ForceMode.Impulse);
-    }
-
-    public void AddforceattackY(float forceStrength)
-    {
-        rb.AddRelativeForce(new Vector3(0f, forceStrength, 0f), ForceMode.Impulse);
+        if(_facingDirection == 1f)
+        {
+            transform.localScale = new Vector3(_initialScale.x, _initialScale.y, _initialScale.z);
+            AlignWithCam();
+            rb.velocity = ScreenRight * pushforce + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
+        }
+        if (_facingDirection == -1f)
+        {
+            transform.localScale = new Vector3(-_initialScale.x, _initialScale.y, _initialScale.z);
+            AlignWithCam();
+            rb.velocity = -ScreenRight * pushforce + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
+        }
     }
 }
