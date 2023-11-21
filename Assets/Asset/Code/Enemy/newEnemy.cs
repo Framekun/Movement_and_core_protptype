@@ -165,11 +165,11 @@ public class newEnemy : MonoBehaviour
         Vector3 Difpos = PLayerpos - Enemy;
         if (Difpos.x < 0)
         {
-            gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+            transform.localScale = new Vector3(_initialScale.x, _initialScale.y, _initialScale.z);
         }
         else
         {
-            gameObject.transform.eulerAngles = new Vector3(0, -180, 0);
+            transform.localScale = new Vector3(-_initialScale.x, _initialScale.y, _initialScale.z);
         }
     }
     void Dead()
