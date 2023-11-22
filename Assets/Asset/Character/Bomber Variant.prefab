@@ -55,6 +55,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
+      propertyPath: ishit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
@@ -62,6 +67,16 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
+      propertyPath: Diedanimation
+      value: Died
+      objectReference: {fileID: 0}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
+      propertyPath: Moveanimation
+      value: Ismove
       objectReference: {fileID: 0}
     - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
@@ -80,9 +95,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
+      propertyPath: Attackanimation
+      value: Attacking
+      objectReference: {fileID: 0}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
+      propertyPath: Damageanimation
+      value: Damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3746199577869267471, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
       propertyPath: attackCooldownTimer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3746199577869267505, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ef3ef219542965e459e49e99c2400ad6, type: 2}
     - target: {fileID: 3746199577869267510, guid: 6fa1a8d479fe6f8438b8f5515f03b2e6,
         type: 3}
       propertyPath: m_Center.x

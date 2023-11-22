@@ -16,12 +16,17 @@ public class newEnemy : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private ScoreHolder _scoreHolder;
     [SerializeField] private bool ishit;
+    [SerializeField] private string Moveanimation;
+    [SerializeField] private string Attackanimation;
+    [SerializeField] private string Damageanimation;
+    [SerializeField] private string Diedanimation;
     private float difDistance;
     bool canmove;
     public float HP;
     public float currentHP;
     int Damageget;
     float delay;
+    float Dieddelay;
     private Enemycontrolscript _controller;
     private Movementcode target;
     public float speed = 5f;
@@ -89,8 +94,14 @@ public class newEnemy : MonoBehaviour
         }
         if (currentHP <= 0 && ishit == false)
         {
-            //_scoreHolder.scoretest += 10;
-            Dead();
+            canmove = false;
+            anim.SetBool(Diedanimation, true);
+            Dieddelay += Time.deltaTime;
+            if(Dieddelay >= 2)
+            {
+                Dead();
+            }
+
         }
     }
     private void FixedUpdate()
@@ -151,10 +162,12 @@ public class newEnemy : MonoBehaviour
             newVelo.y = enemyrb.velocity.y;
 
             enemyrb.velocity = newVelo;
+            anim.SetBool(Moveanimation,true);
         }
         else
         {
             enemyrb.velocity = new(0, enemyrb.velocity.y, 0);
+            anim.SetBool(Moveanimation, false);
         }
     }
 
@@ -184,7 +197,7 @@ public class newEnemy : MonoBehaviour
         {
             attackCooldownTimer = attackCooldown;
             canmove = false;
-            anim.SetTrigger("Attack");
+            anim.SetTrigger(Attackanimation);
             readytoattack = false; 
         }
 
@@ -205,7 +218,7 @@ public class newEnemy : MonoBehaviour
 
     public void TakeHit(Hitboxcode hitbox)
     {
-        anim.SetTrigger("Damage");
+        anim.SetTrigger(Damageanimation);
         Knocksound.Play();
         canmove= false;
         readytoattack = false;
