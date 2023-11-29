@@ -106,7 +106,11 @@ public class newEnemy : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Filler();
+        if(HPBar != null)
+        {
+            Filler();
+        }
+
         UpdateTimers();
     }
 

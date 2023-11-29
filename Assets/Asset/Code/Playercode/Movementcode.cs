@@ -27,6 +27,7 @@ public class Movementcode : MonoBehaviour
     public ParticleSystem Partical;
 
     private float _facingDirection = 1f;
+    public float FacingDirection => _facingDirection;
 
     private Vector3 _initialScale;
 

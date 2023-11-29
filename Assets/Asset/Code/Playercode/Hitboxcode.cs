@@ -7,7 +7,7 @@ public class Hitboxcode : MonoBehaviour
 {
     // Start is called before the first frame update
     public Rigidbody targetrb;
-    public GameObject Player;
+    public Movementcode PlayerMovement;
     public int BaseAttack;
     public int Attack;
     public float knockx;
@@ -39,8 +39,11 @@ public class Hitboxcode : MonoBehaviour
     {
         Debug.Log(gameObject.name);
 
-        Vector3 Knock1 = new Vector3(knockx, knocky, 0);
-        Vector3 Knock2 = new Vector3(-knockx, knocky, 0);
+        Vector3 Knock = new Vector3(knockx, knocky, 0);
+        Knock.x *= PlayerMovement.FacingDirection;
+
+        Knock = PlayerMovement.transform.rotation * Knock;
+
         if (other.gameObject.tag == "Enemy")
         {
             SetCurrentAttack();
@@ -51,19 +54,22 @@ public class Hitboxcode : MonoBehaviour
             }
 
             targetrb = other.GetComponent<Rigidbody>();
+
+            targetrb.AddForce(Knock, ForceMode.Impulse);
+
             //candamage = other.GetComponent<newEnemy>();
             //if(!candamage.isGuardtype) 
             //{
             //    if (candamage.candamageable == true)
             //    {
-            if (other.gameObject.transform.position.x - Player.transform.position.x >= 0)
-            {
-                targetrb.AddForce(Knock1, ForceMode.Impulse);
-            }
-            if (other.gameObject.transform.position.x - Player.transform.position.x < 0)
-            {
-                targetrb.AddForce(Knock2, ForceMode.Impulse);
-            }
+            //if (other.gameObject.transform.position.x - Player.transform.position.x >= 0)
+            //{
+            //    targetrb.AddForce(Knock1, ForceMode.Impulse);
+            //}
+            //if (other.gameObject.transform.position.x - Player.transform.position.x < 0)
+            //{
+            //    targetrb.AddForce(Knock2, ForceMode.Impulse);
+            //}
             //    }
 
             //}
