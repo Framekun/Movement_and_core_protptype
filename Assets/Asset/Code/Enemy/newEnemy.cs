@@ -97,7 +97,7 @@ public class newEnemy : MonoBehaviour
             canmove = false;
             anim.SetBool(Diedanimation, true);
             Dieddelay += Time.deltaTime;
-            if(Dieddelay >= 2)
+            if(Dieddelay >= 0.7)
             {
                 Dead();
             }
