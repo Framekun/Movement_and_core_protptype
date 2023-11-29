@@ -94,6 +94,7 @@ public class newEnemy : MonoBehaviour
         }
         if (currentHP <= 0 && ishit == false)
         {
+            Partical02.Play();
             canmove = false;
             anim.SetBool(Diedanimation, true);
             Dieddelay += Time.deltaTime;
@@ -216,7 +217,7 @@ public class newEnemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Hitbox")
         {
-            Partical02.Play();
+            Partical01.Play();
         }
     }
 
