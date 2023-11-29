@@ -26,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977052339237681368}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.9973503, w: 0.072749384}
-  m_LocalPosition: {x: 0.323, y: 0.671, z: -1.1199999}
-  m_LocalScale: {x: 0.06666665, y: 0.06666665, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.8336538, w: -0.5522874}
+  m_LocalPosition: {x: 0.452, y: -0.144, z: -1.1199999}
+  m_LocalScale: {x: 0.06666667, y: 0.06666667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1912744243489599295}
+  m_Father: {fileID: 7144271734266485314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &5541994048847269956
 Light:
@@ -400,7 +400,7 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6207582735021951734}
-    - targetCorrespondingSourceObject: {fileID: 4257508509235537429, guid: cbfba7fc132312a4691560322d3addd0,
+    - targetCorrespondingSourceObject: {fileID: 4808532571273057128, guid: cbfba7fc132312a4691560322d3addd0,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1902768769041542814}
@@ -416,6 +416,12 @@ Transform:
 --- !u!4 &3940946150515077364 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: cbfba7fc132312a4691560322d3addd0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2422615197634070826}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7144271734266485314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4808532571273057128, guid: cbfba7fc132312a4691560322d3addd0,
     type: 3}
   m_PrefabInstance: {fileID: 2422615197634070826}
   m_PrefabAsset: {fileID: 0}
@@ -452,6 +458,11 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3965643910703258528, guid: 15c22b4d26a85c04c863125396d38180,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 59630fb70792f024c98ba9cdeecf70c3, type: 2}
     - target: {fileID: 3965643910703258531, guid: 15c22b4d26a85c04c863125396d38180,
         type: 3}
       propertyPath: m_UseGravity

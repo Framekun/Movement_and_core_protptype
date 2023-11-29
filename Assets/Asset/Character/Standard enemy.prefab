@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2921377384010754781}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -253,10 +253,10 @@ MonoBehaviour:
   _camera: {fileID: 0}
   _scoreHolder: {fileID: 0}
   ishit: 0
-  Moveanimation: 
-  Attackanimation: 
-  Damageanimation: 
-  Diedanimation: 
+  Moveanimation: Move
+  Attackanimation: Attack
+  Damageanimation: Damage
+  Diedanimation: Dead
   HP: 100
   currentHP: 0
   speed: 5
