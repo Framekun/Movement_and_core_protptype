@@ -24,7 +24,7 @@ public class HP_code : MonoBehaviour
             currentHp = 0;
             Debug.Log("Game_over");
             gameObject.SetActive(false);
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(6);
         }
     }
     void Filler()

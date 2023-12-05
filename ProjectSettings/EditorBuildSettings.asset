@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 1287ac85254b42940b243fc0d187f70c
   - enabled: 1
+    path: Assets/Scenes/Intro_Level_1.unity
+    guid: 371f13a296cc31944a93d6bb778ec93d
+  - enabled: 1
     path: Assets/Scenes/Folk_Level.unity
     guid: e194a033817df6f4ab2eb2bf9ae94b86
+  - enabled: 1
+    path: Assets/Scenes/Intro_Level_2.unity
+    guid: fca13fdc49efc934fb08d16fbeb32399
+  - enabled: 1
+    path: Assets/Scenes/Folk_Level2.unity
+    guid: ff1d24a7f92bb1d4d91c6b291981e8e1
   - enabled: 1
     path: Assets/Scenes/GameClear.unity
     guid: a1558ce1bb606444a86c3cb36410ffad

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelClear : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private int levelNumber;
     void Start()
     {
         
@@ -21,7 +21,8 @@ public class LevelClear : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            SceneManager.LoadScene(2);
+            PlayerPrefs.SetInt("Level_Number", levelNumber);
+            SceneManager.LoadScene(5);
         }
     }
 }
