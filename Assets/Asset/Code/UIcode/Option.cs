@@ -36,9 +36,6 @@ public class Option : MonoBehaviour
         ResDropDownTMP.AddOptions(options);
         ResDropDownTMP.value = currentResolutionIndex;
         ResDropDownTMP.RefreshShownValue();
-        ResDropDownTMP.AddOptions(options);
-        ResDropDownTMP.value = currentResolutionIndex;
-        ResDropDownTMP.RefreshShownValue();
         print("Resolutionloaded");
        
     }
