@@ -694,6 +694,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigbadGiant
       objectReference: {fileID: 0}
+    - target: {fileID: -7986189361177264997, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -7913065178444878776, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -774,6 +779,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7519722154212866590, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -7452997403582366675, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -7221020487405985688, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -824,6 +839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 14.834595
+      objectReference: {fileID: 0}
+    - target: {fileID: -469542070303478727, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 311580695235782034, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
         type: 3}
@@ -896,6 +916,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -876546973899608171, guid: 8a9b56b1d6eaf1d438a23183ada0503e,
         type: 3}
+    - target: {fileID: 2755125384855271182, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2908940205763300328, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
         type: 3}
       propertyPath: m_CastShadows

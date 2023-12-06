@@ -375,6 +375,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SuicidalBomber
       objectReference: {fileID: 0}
+    - target: {fileID: -7986189361177264997, guid: 721378d19685e3846b4a05665ab1b51c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 721378d19685e3846b4a05665ab1b51c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -435,6 +440,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7519722154212866590, guid: 721378d19685e3846b4a05665ab1b51c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -7178615899162201487, guid: 721378d19685e3846b4a05665ab1b51c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -7143818262520823776, guid: 721378d19685e3846b4a05665ab1b51c,
         type: 3}
       propertyPath: m_CastShadows
@@ -456,6 +471,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -876546973899608171, guid: 8a9b56b1d6eaf1d438a23183ada0503e,
         type: 3}
+    - target: {fileID: -5782036450103677946, guid: 721378d19685e3846b4a05665ab1b51c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 134733260939131957, guid: 721378d19685e3846b4a05665ab1b51c,
         type: 3}
       propertyPath: m_CastShadows
@@ -498,6 +518,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -876546973899608171, guid: 8a9b56b1d6eaf1d438a23183ada0503e,
         type: 3}
+    - target: {fileID: 2755125384855271182, guid: 721378d19685e3846b4a05665ab1b51c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4600508316499132082, guid: 721378d19685e3846b4a05665ab1b51c,
         type: 3}
       propertyPath: m_CastShadows
