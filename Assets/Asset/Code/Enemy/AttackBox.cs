@@ -6,7 +6,7 @@ public class AttackBox : MonoBehaviour
 {
     public Rigidbody targetrb;
     public GameObject Enemychar;
-    //public Enemycode enemycode;
+    public newEnemy enemycode;
     public int Attack = 5;
     void Start()
     {
@@ -20,24 +20,17 @@ public class AttackBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Vector3 Knock1 = new Vector3(500, 30, 0);
-        Vector3 Knock2 = new Vector3(-500, 30, 0);
+        Vector3 Knock = new Vector3(500, 0, 0);
+        Knock.x = enemycode.FacingDirection;
+        Knock = enemycode.transform.rotation * Knock * 2500;
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("HIT");
+            if (other.TryGetComponent(out Movementcode movementcode))
+            {
+                movementcode.TakeHit(this);
+            }
             targetrb = other.GetComponent<Rigidbody>();
-
-            if (other.gameObject.transform.position.x - Enemychar.transform.position.x >= 0)
-            {
-                
-                targetrb.AddForce(Knock1, ForceMode.Impulse);
-                
-            }
-            if (other.gameObject.transform.position.x - Enemychar.transform.position.x < 0)
-            {
-                targetrb.AddForce(Knock2, ForceMode.Impulse);
-
-            }
+            targetrb.AddForce(Knock, ForceMode.Impulse);
 
         }
     }

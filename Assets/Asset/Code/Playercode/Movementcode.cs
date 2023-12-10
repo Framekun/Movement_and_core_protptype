@@ -15,8 +15,6 @@ public class Movementcode : MonoBehaviour
     [SerializeField] float pushforce;
     [SerializeField] bool pushNow = false;
     [SerializeField] private Camera _camera;
-
-    public AttackBox Damage;
     public Animator anim;
     public bool Onground = true;
     bool isrolling = false;
@@ -184,15 +182,6 @@ public class Movementcode : MonoBehaviour
     {
         if (other.gameObject.tag == "EnemyHitbox")
         {
-            Damage = other.GetComponent<AttackBox>();
-            if(Candamage == true)
-            {
-                anim.SetTrigger("Damage");
-                Partical.Play();
-                Candamage = false;
-                Knocksound.Play();
-                HP.currentHp -= Damage.Attack;
-            }  
         }
     }
 
@@ -214,6 +203,20 @@ public class Movementcode : MonoBehaviour
             transform.localScale = new Vector3(-_initialScale.x, _initialScale.y, _initialScale.z);
             AlignWithCam();
             rb.velocity = -ScreenRight * pushforce + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
+        }
+    }
+
+    public void TakeHit(AttackBox atkbox)
+    {
+
+        int Damageget = atkbox.Attack;
+        if (Candamage == true)
+        {
+            anim.SetTrigger("Damage");
+            Partical.Play();
+            Candamage = false;
+            Knocksound.Play();
+            HP.currentHp -= Damageget;
         }
     }
 }

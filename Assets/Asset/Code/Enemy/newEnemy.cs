@@ -20,6 +20,8 @@ public class newEnemy : MonoBehaviour
     [SerializeField] private string Attackanimation;
     [SerializeField] private string Damageanimation;
     [SerializeField] private string Diedanimation;
+    private float _facingDirection = 1f;
+    public float FacingDirection => _facingDirection;
     private float difDistance;
     bool canmove;
     public float HP;
@@ -183,10 +185,12 @@ public class newEnemy : MonoBehaviour
         Vector3 Difpos = PLayerpos - Enemy;
         if (Difpos.x < 0)
         {
+            _facingDirection = -1f;
             transform.localScale = new Vector3(_initialScale.x, _initialScale.y, _initialScale.z);
         }
         else
         {
+            _facingDirection = 1f;
             transform.localScale = new Vector3(-_initialScale.x, _initialScale.y, _initialScale.z);
         }
     }

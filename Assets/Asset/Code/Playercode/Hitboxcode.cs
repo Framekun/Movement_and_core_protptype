@@ -40,7 +40,7 @@ public class Hitboxcode : MonoBehaviour
         Debug.Log(gameObject.name);
 
         Vector3 Knock = new Vector3(knockx, knocky, 0);
-        Knock.x *= PlayerMovement.FacingDirection;
+        Knock.x *= PlayerMovement.FacingDirection*100;
 
         Knock = PlayerMovement.transform.rotation * Knock;
 
