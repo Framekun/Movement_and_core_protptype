@@ -22,7 +22,7 @@ public class AttackBox : MonoBehaviour
     {
         Vector3 Knock = new Vector3(500, 0, 0);
         Knock.x = enemycode.FacingDirection;
-        Knock = enemycode.transform.rotation * Knock * 2500;
+        Knock = enemycode.transform.rotation * Knock * 500;
         if (other.gameObject.tag == "Player")
         {
             if (other.TryGetComponent(out Movementcode movementcode))

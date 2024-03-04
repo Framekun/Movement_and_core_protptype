@@ -1466,7 +1466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 126136027325746434}
   Speed: 20
-  Jumppower: 20
+  Jumppower: 10
   DecelerationWhileAttacking: 40
   Jumpsound: {fileID: 1721335213561376560}
   Knocksound: {fileID: 4268477695922797629}
@@ -1474,7 +1474,6 @@ MonoBehaviour:
   pushforce: 10
   pushNow: 0
   _camera: {fileID: 0}
-  Damage: {fileID: 0}
   anim: {fileID: 5541399528170429763}
   Onground: 1
   canmovecheck: 1
