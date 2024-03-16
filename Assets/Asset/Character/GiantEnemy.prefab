@@ -855,8 +855,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: 8a9b56b1d6eaf1d438a23183ada0503e,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: f8e3124558f48cf49ad782e439222088, type: 2}
     - target: {fileID: -2139580313564902691, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -941,8 +940,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: 8a9b56b1d6eaf1d438a23183ada0503e,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: f8e3124558f48cf49ad782e439222088, type: 2}
     - target: {fileID: 2755125384855271182, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
         type: 3}
       propertyPath: m_Layer
@@ -967,8 +965,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: 8a9b56b1d6eaf1d438a23183ada0503e,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: f8e3124558f48cf49ad782e439222088, type: 2}
     - target: {fileID: 4257508509235537429, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -1013,8 +1010,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: 8a9b56b1d6eaf1d438a23183ada0503e,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: f8e3124558f48cf49ad782e439222088, type: 2}
     - target: {fileID: 8442352221121546490, guid: 29f6cf772c4d45d44b85b62a3c3d0cb0,
         type: 3}
       propertyPath: m_CastShadows
@@ -1034,8 +1030,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: 8a9b56b1d6eaf1d438a23183ada0503e,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: f8e3124558f48cf49ad782e439222088, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
