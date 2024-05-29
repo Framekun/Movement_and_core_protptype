@@ -16,7 +16,9 @@ public class AttackMove
     public List<string> PrevComboMoves => _prevComboMoves;
 
     [SerializeField] private KeyCode _attackKey;
+    [SerializeField] private KeyCode _attackKey2;
     public KeyCode AttackKey => _attackKey;
+    public KeyCode AttackKey2 => _attackKey2;
 
     [SerializeField] private string _animTriggerName;
     public string AnimTriggerName => _animTriggerName;
@@ -31,5 +33,7 @@ public class AttackMove
     public float StaminaBlueCost => _staminaBlueCost;
 
     [SerializeField] private bool _shouldCheckBlueStamina;
+    
+
     public bool ShouldCheckBlueStamina => _shouldCheckBlueStamina;
 }

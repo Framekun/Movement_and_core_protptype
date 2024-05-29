@@ -15,6 +15,7 @@ public class New_Attacksystem : MonoBehaviour
     public AttackState CurrentAttackState => _currentAttackState;
 
     [SerializeField] private List<AttackMove> _attackMoves = new List<AttackMove>();
+    [SerializeField] private List<AttackMove> _attackMoves2 = new List<AttackMove>();
 
     private string _latestAttackName;
 
@@ -40,7 +41,7 @@ public class New_Attacksystem : MonoBehaviour
         }
     }
 
-   void Attackcode()
+    void Attackcode()
     {
         foreach (AttackMove move in _attackMoves)
         {
@@ -57,7 +58,22 @@ public class New_Attacksystem : MonoBehaviour
                 canattack = false;
                 _latestAttackName = move.MoveName;
             }
+            else if (Input.GetKeyDown(move.AttackKey2)
+                && (canattack || (move.PrevComboMoves.Contains(_latestAttackName) && _currentAttackState == AttackState.Recovering)))
+            {
+                if (!string.IsNullOrWhiteSpace(move.AnimTriggerName))
+                {
+                    animator.SetTrigger(move.AnimTriggerName);
+                    Attacksound.Play();
+                }
+
+                delay = move.AttackDelay;
+                canattack = false;
+                _latestAttackName = move.MoveName;
+            }
+
         }
+    }
 
         /*
         if (Input.GetKeyDown(KeyCode.Mouse0) == true )
@@ -85,7 +101,6 @@ public class New_Attacksystem : MonoBehaviour
             canattack = false;
         }
         */
-    }
 
     public enum AttackState
     {

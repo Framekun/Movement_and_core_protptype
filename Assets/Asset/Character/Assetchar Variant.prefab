@@ -1502,6 +1502,7 @@ MonoBehaviour:
     _attackDelay: 0.5
     _prevComboMoves: []
     _attackKey: 323
+    _attackKey2: 106
     _animTriggerName: N_atk01
     _staminaRedCost: 0
     _shouldCheckRedStamina: 0
@@ -1512,6 +1513,7 @@ MonoBehaviour:
     _prevComboMoves:
     - N_atk01
     _attackKey: 323
+    _attackKey2: 106
     _animTriggerName: N_atk02
     _staminaRedCost: 0
     _shouldCheckRedStamina: 0
@@ -1522,15 +1524,18 @@ MonoBehaviour:
     _prevComboMoves:
     - N_atk02
     _attackKey: 323
+    _attackKey2: 106
     _animTriggerName: N_atk03
     _staminaRedCost: 0
     _shouldCheckRedStamina: 0
     _staminaBlueCost: 0
     _shouldCheckBlueStamina: 0
   - _moveName: L_atk01
-    _attackDelay: 1
-    _prevComboMoves: []
+    _attackDelay: 0.5
+    _prevComboMoves:
+    - N_atk02
     _attackKey: 324
+    _attackKey2: 107
     _animTriggerName: L_atk01
     _staminaRedCost: 0
     _shouldCheckRedStamina: 0
@@ -1540,12 +1545,15 @@ MonoBehaviour:
     _attackDelay: 1
     _prevComboMoves:
     - L_atk01
+    - N_atk01
     _attackKey: 324
+    _attackKey2: 107
     _animTriggerName: L_atk02
     _staminaRedCost: 0
     _shouldCheckRedStamina: 0
     _staminaBlueCost: 0
     _shouldCheckBlueStamina: 0
+  _attackMoves2: []
 --- !u!114 &3873836903453538135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2144,6 +2152,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027514048236820043, guid: effb650189dc5714e9e9801b1cfb3991,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9027514048236820044, guid: effb650189dc5714e9e9801b1cfb3991,
         type: 3}
