@@ -1502,10 +1502,10 @@ MonoBehaviour:
     _attackDelay: 0.5
     _prevComboMoves: []
     _attackKey: 323
-    _attackKey2: 106
+    _attackKey2: 332
     _animTriggerName: N_atk01
     _staminaRedCost: 0
-    _shouldCheckRedStamina: 0
+    _shouldCheckRedStamina: 1
     _staminaBlueCost: 0
     _shouldCheckBlueStamina: 0
   - _moveName: N_atk02
@@ -1513,7 +1513,7 @@ MonoBehaviour:
     _prevComboMoves:
     - N_atk01
     _attackKey: 323
-    _attackKey2: 106
+    _attackKey2: 332
     _animTriggerName: N_atk02
     _staminaRedCost: 0
     _shouldCheckRedStamina: 0
@@ -1524,18 +1524,18 @@ MonoBehaviour:
     _prevComboMoves:
     - N_atk02
     _attackKey: 323
-    _attackKey2: 106
+    _attackKey2: 332
     _animTriggerName: N_atk03
     _staminaRedCost: 0
     _shouldCheckRedStamina: 0
     _staminaBlueCost: 0
-    _shouldCheckBlueStamina: 0
+    _shouldCheckBlueStamina: 1
   - _moveName: L_atk01
     _attackDelay: 0.5
     _prevComboMoves:
     - N_atk02
     _attackKey: 324
-    _attackKey2: 107
+    _attackKey2: 333
     _animTriggerName: L_atk01
     _staminaRedCost: 0
     _shouldCheckRedStamina: 0
@@ -1547,7 +1547,7 @@ MonoBehaviour:
     - L_atk01
     - N_atk01
     _attackKey: 324
-    _attackKey2: 107
+    _attackKey2: 333
     _animTriggerName: L_atk02
     _staminaRedCost: 0
     _shouldCheckRedStamina: 0

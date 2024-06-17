@@ -37,7 +37,6 @@ public class Hitboxcode : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(gameObject.name);
 
         Vector3 Knock = new Vector3(knockx, knocky, 0);
         Knock.x *= PlayerMovement.FacingDirection*100;

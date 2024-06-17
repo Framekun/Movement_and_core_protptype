@@ -67,7 +67,7 @@ public class newEnemy : MonoBehaviour
         currentHP = HP;
         target = FindObjectOfType<Movementcode>();
         difDistance = Random.value / 4.0f;
-        print("number" + difDistance);
+        //print("number" + difDistance);
         Partical01.Stop();
         Partical02.Stop();
     }

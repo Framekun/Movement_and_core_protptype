@@ -63,7 +63,8 @@ public class Movementcode : MonoBehaviour
 
         if (canmovecheck == true)
         {
-            Movement();
+            //Movement();
+            joymovement();
             Jump();
             Candamage = true;
         }
@@ -132,7 +133,7 @@ public class Movementcode : MonoBehaviour
             rb.velocity = ScreenRight * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
             anim.SetBool("Isrunning", true);
         }
-        else if (Input.GetKey(KeyCode.W) == false && Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.S) == false && Input.GetKey(KeyCode.D) == false)
+        else if (Input.GetKey(KeyCode.W) == false && Input.GetKey(KeyCode.A) == false && Input.GetKey(KeyCode.S) == false && Input.GetKey(KeyCode.D)== false)
         {
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
             anim.SetBool("Isrunning", false);
@@ -140,16 +141,67 @@ public class Movementcode : MonoBehaviour
 
     }
 
+    void joymovement()
+    {
+        float horimove = Input.GetAxis("Horizontal");
+        float vertimove = Input.GetAxis("Vertical");
+        //print("MoveX "+ horimove +" MoveY "+vertimove);
+        
+        if(horimove != 0)
+        {
+            if(horimove < 0)
+            {
+                Debug.Log("Left");
+                _facingDirection = -1f;
+                transform.localScale = new Vector3(-_initialScale.x, _initialScale.y, _initialScale.z);
+                AlignWithCam();
+                rb.velocity = -ScreenRight * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
+                anim.SetBool("Isrunning", true);
+            }
+            else if(horimove > 0)
+            {
+                Debug.Log("Right");
+                _facingDirection = 1f;
+                transform.localScale = new Vector3(_initialScale.x, _initialScale.y, _initialScale.z);
+                AlignWithCam();
+                rb.velocity = ScreenRight * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenRight);
+                anim.SetBool("Isrunning", true);
+            }
+        }
+        if(vertimove != 0)
+        {
+            if(vertimove < 0)
+            {
+                rb.velocity = -ScreenForward * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenForward);
+                anim.SetBool("Isrunning", true);
+            }
+            if(vertimove > 0)
+            {
+                rb.velocity = ScreenForward * Speed + Vector3.ProjectOnPlane(rb.velocity, ScreenForward);
+                anim.SetBool("Isrunning", true);
+            }
+        }
+        else if(vertimove == 0 && horimove == 0)
+        {
+            rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            anim.SetBool("Isrunning", false);
+        }
+    }
+
     void Jump()
     {
         Vector3 Jumpig = new Vector3(0, Jumppower, 0);
-        if (Input.GetKeyDown(KeyCode.Space) && Onground == true) 
+        if (Onground == true) 
         {
-            anim.SetTrigger("Jump");
-            rb.AddForce(Jumpig,ForceMode.Impulse);
-            rb.velocity = Jumpig;
-            Onground = false;
-            Jumpsound.Play();
+            if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+            {
+                anim.SetTrigger("Jump");
+                rb.AddForce(Jumpig, ForceMode.Impulse);
+                rb.velocity = Jumpig;
+                Onground = false;
+                Jumpsound.Play();
+            }
+            
         }
     }
 

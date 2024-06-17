@@ -22,14 +22,14 @@ public class HP_code : MonoBehaviour
         if (currentHp <= 0)
         {
             currentHp = 0;
-            Debug.Log("Game_over");
+            //Debug.Log("Game_over");
             gameObject.SetActive(false);
             SceneManager.LoadScene(6);
         }
     }
     void Filler()
     {
-        Debug.Log("Currentfill"+ currentHp / MaxHp);
+        //Debug.Log("Currentfill"+ currentHp / MaxHp);
         HPBar.fillAmount = currentHp/MaxHp;
     }
 }
