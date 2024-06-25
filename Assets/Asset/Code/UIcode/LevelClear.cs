@@ -8,7 +8,7 @@ public class LevelClear : MonoBehaviour
     [SerializeField] private int levelNumber;
     void Start()
     {
-        
+        PlayerPrefs.SetInt("Level_Number", levelNumber);
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class LevelClear : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            PlayerPrefs.SetInt("Level_Number", levelNumber);
+            
             SceneManager.LoadScene(5);
         }
     }

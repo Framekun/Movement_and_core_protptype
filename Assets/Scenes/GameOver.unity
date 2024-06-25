@@ -1246,8 +1246,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 2
-  levelNumber: 0
+  levelNumber: 2
   sceneNumber: 0
+  isGameover: 1
 --- !u!1001 &509897514
 PrefabInstance:
   m_ObjectHideFlags: 0
