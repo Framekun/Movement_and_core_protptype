@@ -6,7 +6,14 @@ using UnityEngine.SceneManagement;
 public class Tutorial : MonoBehaviour
 {
     [SerializeField] private int _sceneNumber;
-  public void Loadscene()
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.Joystick1Button1))
+        {
+            Loadscene();
+        }
+    }
+    public void Loadscene()
     {
         SceneManager.LoadScene(_sceneNumber);
     }

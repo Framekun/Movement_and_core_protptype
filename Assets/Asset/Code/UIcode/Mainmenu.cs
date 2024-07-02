@@ -16,6 +16,7 @@ public class Mainmenu : MonoBehaviour
     void Update()
     {
         Backtomenu();
+        Joycontrol();
     }
 
     public void Startgame()
@@ -29,7 +30,7 @@ public class Mainmenu : MonoBehaviour
     }
     public void Backtomenu()
     {
-        if(Input.GetKey(KeyCode.Escape))
+        if(Input.GetKey(KeyCode.Escape)||Input.GetKeyDown(KeyCode.Joystick1Button7))
         {
             SceneManager.LoadScene(0);
         }
@@ -37,5 +38,21 @@ public class Mainmenu : MonoBehaviour
     public void Tutorial()
     {
         SceneManager.LoadScene(7);
+    }
+
+    void Joycontrol()
+    {
+        if(Input.GetKey(KeyCode.Joystick1Button1))
+        {
+            Startgame();
+        }
+        if (Input.GetKey(KeyCode.Joystick1Button0))
+        {
+            Tutorial();
+        }
+        if (Input.GetKey(KeyCode.Joystick1Button2))
+        {
+            Exitgame();
+        }
     }
 }
