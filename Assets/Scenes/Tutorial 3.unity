@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a79063951e83294ba76fc92be5fd8e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneNumber: 9
+  _sceneNumber: 0
 --- !u!4 &888561317
 Transform:
   m_ObjectHideFlags: 0
@@ -745,7 +745,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: c5d2f98ff67f25041b21e536eba0b555, type: 3}
+  m_Texture: {fileID: 2800000, guid: 479b3359d59484c4b9220c9a2abd8e84, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
